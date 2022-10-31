@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const cdk = require('aws-cdk-lib');
-const { CdkAlbStack } = require('../lib/cdk-alb-stack');
+import {App} from 'aws-cdk-lib';
+import {CdkAlbStack} from '../lib/cdk-alb-stack.js'
 
-const app = new cdk.App();
+const app = new App();
 new CdkAlbStack(app, 'CdkAlbStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
